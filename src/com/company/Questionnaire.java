@@ -4,8 +4,6 @@ package com.company;
  * Created by JARVIS on 3/15/2017.
  */
 
-import java.util.Random;
-
 public class Questionnaire {
 
     int mQuestionID;

@@ -10,9 +10,9 @@ public class Main {
         //Animals:
         Questionnaire q1 = new Questionnaire(1, "Barking animal?", "dog");
         Questionnaire q2 = new Questionnaire(2, "Meowing animal?", "cat");
-        Questionnaire q3 = new Questionnaire(3, "Birds that swims?", "penguins");
+        Questionnaire q3 = new Questionnaire(3, "Bird that swims?", "penguin");
         Questionnaire q4 = new Questionnaire(4, "Fastest land animal?", "cheetah");
-        Questionnaire q5 = new Questionnaire(5, "Birds that swims?", "penguins");
+        Questionnaire q5 = new Questionnaire(5, "Tallest land mammal?", "giraffe");
 
         //Avengers:
         Questionnaire q6 = new Questionnaire(6, "Peter Parker?", "Spider-Man");
@@ -20,6 +20,8 @@ public class Main {
         Questionnaire q8 = new Questionnaire(8, "Steve Rogers?", "Captain America");
         Questionnaire q9 = new Questionnaire(9, "Dr. Banner?", "Hulk");
         Questionnaire q10 = new Questionnaire(10, "Natasha Romanoff?", "Black Widow");
+
+        System.out.println("5 Correct answers to finish the game.\n");
 
         int score = 0;
         String userAns;
@@ -29,8 +31,6 @@ public class Main {
         Random random = new Random();
 
         while (score != 5) {
-
-            System.out.println("5 Correct answers to finish the game.\n");
 
             //Question Generator
 
@@ -106,7 +106,11 @@ public class Main {
                 score++;
                 System.out.println("Current Score: " + score);
             } else {
+                if (score > 0) {
+                    score--;
+                }
                 System.out.println("Wrong! Try Again! You need " + (5 - score) + " more correct answer to finish the game!\n");
+                System.out.println("Current Score: " + score);
             }
 
         }
